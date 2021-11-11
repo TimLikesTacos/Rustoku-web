@@ -22,13 +22,32 @@ and returns a `Result`, however this app ignores errors (again, this is just a d
 
 ##  Usage
 
+### Install and build wasm-pack
+Directions to install are <a href="https://github.com/rustwasm/wasm-pack">here</a>.  
+In the root directory, build the wasm files by running:
+```
+wasm-pack build
+```
 ###  Requires NPM
 
-
+Start the development server by:
 ```
 cd www
 npm install
 npm run start
 ```
+
+Open `localhost:8080` in your browser.
+
+## Screenshots
+
+![Claiming Candidates](./screenshots/claiming.png)  
+![Finned Jellyfish](./screenshots/finned_jelly.png)  
+![Finned Swordfish](./screenshots/finnedswordfish.png)
+![Finned Xwing](./screenshots/finnedxwing.png)
+![hiddendouble](./screenshots/hiddendouble.png)
+![Hidden Quad](./screenshots/hiddenquad.png)
+![Pointing](./screenshots/pointing.png)
+![Swordfish](./screenshots/swordfish.png)
 
 
