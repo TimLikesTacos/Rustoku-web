@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel="stylesheet" media="all" type="text/css" href="sudokuJS.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+  /** {*/
+  /*  margin:0; padding:0;*/
+  /*  -moz-box-sizing: border-box;*/
+  /*  box-sizing: border-box;*/
+  /*}*/
+  .wrap {
+    padding: 1em 1em;
+    width: 500px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header {
+    font-size: 2.5em;
+    text-align: center;
+    color: #A34822;
+  }
+
+  @media(min-width: 30em){
+    .wrap{
+      width: 490px;
+    }
+    .sudoku-board input {
+      font-size: 24px;
+      font-size: 1.5rem;
+    }
+    .sudoku-board .candidates {
+      font-size: .8em;
+    }
+  }
+
+</style>
+
+<title>Rustoku</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrap">
+      <h1 class="header">Rustoku Demo</h1>
+      <div id="sudoku" class="sudoku-board" data-board-size="9"></div>
+    </div>
+    <div id="message-div" class="container" style="text-align: center; width:500px;">
+      <div class="row" style="height:40px">
+        <div class="col-3 h-100">
+          <button id="hint" onclick="get_hint()">Hint</button>
+        </div>
+        <div class="col-3 h-100">
+          <button id="clear" hidden>Clear Hint</button>
+        </div>
+       <div class="col-6 h-100">
+         <p id="message-p"></p>
+       </div>
+      </div>
+
+      <div class="col">
+
+        <div class="row border my-2" >
+          <div class="col-3" style="padding: 1px">
+            <p class="my-auto" style="width:100%;">Puzzle String: </p>
+          </div>
+          <div class="col-9" style="padding: 1px">
+            <input id="puzzle_input" style="font-size: 12px; width:100%;" value="...16.87..1.875..38.73..651.5.62173...17..5.473.5..1...7........8.256917.62..7...">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button id="puzzle_submit">Create Puzzle</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col border my-2" style="height:100px">
+        <div class="row-1" style="font-size: 12px; text-align: left;margin-block: 0em 0em">
+          <style>
+            p {
+              margin-block: .2em .2em;
+            }
+          </style>
+          <p>Example puzzle strings. Copy and paste into the puzzle string box:</p>
+          <p>Very Hard* : ..53.....8......2..7..1.5..4....53...1..7...6..32...8..6.5....9..4....3......97..</p>
+          <p>Finned Jellyfish: ...16.87..1.875..38.73..651.5.62173...17..5.473.5..1...7........8.256917.62..7...</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <script src="./bootstrap.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
